@@ -14,7 +14,6 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import identidade from '../images/identidade.jpg'
 
     const pages = ['Products', 'Pricing', 'Blog'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];

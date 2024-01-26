@@ -74,6 +74,27 @@ export default function Login(){
                                         backgroundColor: "#8eabc2",
                                         margin:'1px'}}
                                     onChange={(e) => setPassword(e.target.value)} />
+
+                                <Grid>
+                                    <Button sx={{backgroundColor: '#8eabc2',
+                                                color: '#C2F6F7',
+                                                margin:'24px',
+                                                right:'12px',
+                                                width:'125px'
+                                    }}
+                                    onChange={(handleLogin)}>
+                                        Entrar
+                                    </Button>
+
+                                    <Button sx={{backgroundColor: '#8eabc2',
+                                                color: '#C2F6F7',
+                                                margin:'24px',
+                                                left:'12px',
+                                                width:'125px'
+                                    }}>
+                                        Registrar
+                                    </Button>
+                                </Grid>
                             </Item>
                         </Grid>
                         <Grid item md={6} sx={{

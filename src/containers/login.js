@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Typography, experimentalStyled } from "@mui/material";
+import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-import { experimentalStyled as styled } from '@mui/material/styles';
+import axios from 'axios';
 import Button from "@mui/material/Button";
 import identidade from "../images/identidade.jpg"
 import { useNavigate } from 'react-router-dom';
@@ -15,8 +15,23 @@ export default function Login(){
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
 
-    const handleLogin = () => {
-        alert('username: ${emai} password: ${password}');
+    const handleLogin = async () => {
+        const returnObject = await axios({
+            method:"post",
+            url:"http://localhost:3000/login",
+            data: {
+                email: email,
+                password: password,
+            },
+        })
+        .then((result) => {
+            alert('Fez login!');
+            return result.data;
+        }) 
+        .catch((error) =>{
+            alert({"Usuário inválido": error})
+        });
+        console.log('returnObject', returnObject);
     };
 
     return(
@@ -82,7 +97,7 @@ export default function Login(){
                                                 right:'12px',
                                                 width:'125px'
                                     }}
-                                    onChange={(handleLogin)}>
+                                    onClick={(handleLogin)}>
                                         Entrar
                                     </Button>
 

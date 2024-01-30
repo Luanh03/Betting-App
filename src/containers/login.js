@@ -3,9 +3,8 @@ import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-import axios from 'axios';
 import Button from "@mui/material/Button";
-import identidade from "../images/identidade.jpg"
+import identidade2 from "../images/identidade2.jpeg"
 import { useNavigate } from 'react-router-dom';
 import { RemoveScroll } from 'react-remove-scroll';
 import { Item } from '../components/ItemLogin';
@@ -14,25 +13,8 @@ export default function Login(){
     const navigate = useNavigate();
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
-
-    const handleLogin = async () => {
-        const returnObject = await axios({
-            method:"post",
-            url:"http://localhost:3000/login",
-            data: {
-                email: email,
-                password: password,
-            },
-        })
-        .then((result) => {
-            alert('Fez login!');
-            return result.data;
-        }) 
-        .catch((error) =>{
-            alert({"Usuário inválido": error})
-        });
-        console.log('returnObject', returnObject);
-    };
+    console.log(email);
+    console.log(password);
 
     return(
         <React.Fragment>
@@ -45,7 +27,7 @@ export default function Login(){
                             width:'100%',
                             height:'100vh'}}>
                             <Item>
-                                    <img src={identidade} style={{width: '182px', 
+                                    <img src={identidade2} style={{width: '182px', 
                                     height: '183px', 
                                     WebkitMaskPositionX: '255PX', 
                                     WebKitMaskPositionY: '110px',
@@ -97,7 +79,7 @@ export default function Login(){
                                                 right:'12px',
                                                 width:'125px'
                                     }}
-                                    onClick={(handleLogin)}>
+                                    onClick={() => navigate("/Home")}>
                                         Entrar
                                     </Button>
 
@@ -106,7 +88,8 @@ export default function Login(){
                                                 margin:'24px',
                                                 left:'12px',
                                                 width:'125px'
-                                    }}>
+                                    }}
+                                    onClick={() => navigate("/Register")}>
                                         Registrar
                                     </Button>
                                 </Grid>
@@ -116,9 +99,9 @@ export default function Login(){
                             left:'0',
                             top:'0',
                             width:'100%',
-                            height:'100vh',
+                            
                         }}>
-                            <img src={identidade} style={{ width: '100%', height: '100%'}}/>
+                            <img src={identidade2} style={{ width: '100%', height: '100vh'}}/>
                         </Grid>
                     </Grid>
                 </Box>

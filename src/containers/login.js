@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import identidade2 from "../images/identidade2.jpeg"
+import macaco from "../images/macaco.jpg"
 import { useNavigate } from 'react-router-dom';
 import { RemoveScroll } from 'react-remove-scroll';
 import { Item } from '../components/ItemLogin';
@@ -27,7 +27,7 @@ export default function Login(){
                             width:'100%',
                             height:'100vh'}}>
                             <Item>
-                                    <img src={identidade2} style={{width: '182px', 
+                                    <img src={macaco} style={{width: '182px', 
                                     height: '183px', 
                                     WebkitMaskPositionX: '255PX', 
                                     WebKitMaskPositionY: '110px',
@@ -36,7 +36,7 @@ export default function Login(){
 
                                 <Typography
                                     variant="h6"
-                                    gutterBottom sx={{ color: "#C2F6F7", 
+                                    gutterBottom sx={{ color: "#e69d22", 
                                     fontsize: '32px',
                                     margin: '14px'}}>
                                         Username
@@ -49,13 +49,13 @@ export default function Login(){
                                     sx={{ width:'326px',
                                         height:'46px',
                                         borderRadius:'12px',
-                                        backgroundColor: "#8eabc2",
+                                        backgroundColor: "#f4a71a",
                                         margin:'1px'}}
                                     onChange={(e) => setEmail(e.target.value)}/>
 
                                 <Typography
                                     variant="h6"
-                                    gutterBottom sx={{ color: "#C2F6F7", 
+                                    gutterBottom sx={{ color: "#e69d22", 
                                     fontsize: '32px',
                                     margin:'14px'}}>
                                         Password
@@ -68,13 +68,13 @@ export default function Login(){
                                     sx={{ width:'326px',
                                         height:'46px',
                                         borderRadius:'12px',
-                                        backgroundColor: "#8eabc2",
+                                        backgroundColor: "#f4a71a",
                                         margin:'1px'}}
                                     onChange={(e) => setPassword(e.target.value)} />
 
                                 <Grid>
-                                    <Button sx={{backgroundColor: '#8eabc2',
-                                                color: '#C2F6F7',
+                                    <Button sx={{backgroundColor: '#e69d22',
+                                                color: '#9d530c',
                                                 margin:'24px',
                                                 right:'12px',
                                                 width:'125px'
@@ -83,8 +83,8 @@ export default function Login(){
                                         Entrar
                                     </Button>
 
-                                    <Button sx={{backgroundColor: '#8eabc2',
-                                                color: '#C2F6F7',
+                                    <Button sx={{backgroundColor: '#e69d22',
+                                                color: '#9d530c',
                                                 margin:'24px',
                                                 left:'12px',
                                                 width:'125px'
@@ -101,7 +101,7 @@ export default function Login(){
                             width:'100%',
                             
                         }}>
-                            <img src={identidade2} style={{ width: '100%', height: '100vh'}}/>
+                            <img src={macaco} style={{ width: '100%', height: '100vh'}}/>
                         </Grid>
                     </Grid>
                 </Box>

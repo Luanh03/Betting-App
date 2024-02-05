@@ -14,12 +14,17 @@ export default function Register(){
     const [data_nasc, setData_nasc] = React.useState("");
     const [telefone, setTelefone] = React.useState("");
 
+    console.log(nome);
+    console.log(email);
 
     return (
         <React.Fragment>
             <RemoveScroll>    
                 <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid columns={{ xs: 4, sm: 8, md: 12 }} sx={{textAlign:"center",
+                                                                backgroundColor:'#f4a71a',
+                                                                }}>
+                        <h1>Register user</h1>
                         <Grid item md={12} sx={{ textAlign: 'center',
                                                 backgroundColor: '#100f15',
                                                 height:'100vh',

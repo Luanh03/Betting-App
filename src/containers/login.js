@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import macaco from "../images/macaco.jpg"
+import identidade from "../images/identidade.jpg"
 import { useNavigate } from 'react-router-dom';
 import { RemoveScroll } from 'react-remove-scroll';
 import { Item } from '../components/ItemLogin';
@@ -27,7 +27,7 @@ export default function Login(){
                             width:'100%',
                             height:'100vh'}}>
                             <Item>
-                                    <img src={macaco} style={{width: '182px', 
+                                    <img src={identidade} style={{width: '182px', 
                                     height: '183px', 
                                     WebkitMaskPositionX: '255PX', 
                                     WebKitMaskPositionY: '110px',
@@ -101,7 +101,7 @@ export default function Login(){
                             width:'100%',
                             
                         }}>
-                            <img src={macaco} style={{ width: '100%', height: '100vh'}}/>
+                            <img src={identidade} style={{ width: '100%', height: '100vh'}}/>
                         </Grid>
                     </Grid>
                 </Box>

@@ -4,9 +4,12 @@ import Grid from '@mui/material/Grid';
 import TextField from "@mui/material/TextField";
 import Typography from '@mui/material/Typography';
 import { RemoveScroll } from 'react-remove-scroll';
+import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 export default function Register(){
 
+    const navigate = useNavigate();
     const [nome, setNome] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [password, setPassword ] = React.useState("");
@@ -24,7 +27,7 @@ export default function Register(){
                     <Grid columns={{ xs: 4, sm: 8, md: 12 }} sx={{textAlign:"center",
                                                                 backgroundColor:'#f4a71a',
                                                                 }}>
-                        <h1>Register user</h1>
+                        <h1>Registrar usuário</h1>
                         <Grid item md={12} sx={{ textAlign: 'center',
                                                 backgroundColor: '#100f15',
                                                 height:'100vh',
@@ -142,7 +145,27 @@ export default function Register(){
                                         borderRadius:'12px',
                                         backgroundColor: "#f4a71a",
                                         margin:'1px'}}
-                                onChange={(e) => setTelefone(e.target.value)}/>                                
+                                onChange={(e) => setTelefone(e.target.value)}/>                 
+                            <Grid>
+                                <Button sx={{backgroundColor: '#e69d22',
+                                                color: '#9d530c',
+                                                margin:'24px',
+                                                right:'12px',
+                                                width:'125px'
+                                            }}
+                                onClick={() => navigate("/")}>
+                                            Registrar
+                                </Button>
+                                <Button sx={{backgroundColor: '#e69d22',
+                                                color: '#9d530c',
+                                                margin:'24px',
+                                                right:'12px',
+                                                width:'125px'
+                                            }}
+                                onClick={() => navigate("/")}>
+                                            Voltar
+                                </Button>
+                            </Grid>               
                         </Grid>
                     </Grid>
                 </Box>

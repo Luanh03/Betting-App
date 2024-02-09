@@ -26,6 +26,9 @@ export default function Register(){
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid columns={{ xs: 4, sm: 8, md: 12 }} sx={{textAlign:"center",
                                                                 backgroundColor:'#f4a71a',
+                                                                position:'absolute',
+                                                                left:'0',
+                                                                right:'0'
                                                                 }}>
                         <h1>Registrar usuário</h1>
                         <Grid item md={12} sx={{ textAlign: 'center',

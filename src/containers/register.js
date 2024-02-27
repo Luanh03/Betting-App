@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import TextField from "@mui/material/TextField";
 import Typography from '@mui/material/Typography';
-import { RemoveScroll } from 'react-remove-scroll';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
@@ -21,17 +20,16 @@ export default function Register(){
     console.log(email);
 
     return (
-        <React.Fragment>
-            <RemoveScroll>    
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid columns={{ xs: 4, sm: 8, md: 12 }} sx={{textAlign:"center",
+        <React.Fragment>  
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid columns={{ xs: 4, sm: 8, md: 12 }} sx={{textAlign:"center",
                                                                 backgroundColor:'#f4a71a',
                                                                 position:'absolute',
                                                                 left:'0',
                                                                 right:'0'
                                                                 }}>
-                        <h1>Registrar usuário</h1>
-                        <Grid item md={12} sx={{ textAlign: 'center',
+                    <h1>Registrar usuário</h1>
+                <Grid item md={12} sx={{ textAlign: 'center',
                                                 backgroundColor: '#100f15',
                                                 height:'100vh',
                                                 width:'100%'
@@ -149,7 +147,7 @@ export default function Register(){
                                         backgroundColor: "#f4a71a",
                                         margin:'1px'}}
                                 onChange={(e) => setTelefone(e.target.value)}/>                 
-                            <Grid>
+                            <Grid sx={{backgroundColor: '#100f15'}}>
                                 <Button sx={{backgroundColor: '#e69d22',
                                                 color: '#9d530c',
                                                 margin:'24px',
@@ -163,6 +161,7 @@ export default function Register(){
                                                 color: '#9d530c',
                                                 margin:'24px',
                                                 right:'12px',
+                                                left:'12px',
                                                 width:'125px'
                                             }}
                                 onClick={() => navigate("/")}>
@@ -172,7 +171,6 @@ export default function Register(){
                         </Grid>
                     </Grid>
                 </Box>
-            </RemoveScroll>
         </React.Fragment>
     );
 }
